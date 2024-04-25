@@ -17,7 +17,7 @@ router.get("/movies", (req, res) => {
   fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      res.json({ movies: data });
+      res.json({ movies: data.results });
       console.log(data);
     });
 });
